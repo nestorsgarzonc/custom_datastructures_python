@@ -21,7 +21,7 @@ class Stack:
     def __init__(self):
         self.head = None
 
-    def append(self, data, priority):
+    def append(self, data, priority: int):
         if self.head == None:
             self.head = Node(data, priority)
         else:
@@ -48,13 +48,14 @@ class PriorityQueue:
         """
         self.node = Stack()
 
-    def append(self, value, priority):
+    def append(self, value, priority: int):
         """
             Se inserta un nuevo elemento, se reordena según la prioridad de los elementos 
         """
+        
         self.node.append(value, priority)
 
-    def extract_max(self):
+    def extract_max(self) -> str:
         """ Se otiene el valor de mayor prioridad en la cola """
         max_index = -1
         max_element = None
