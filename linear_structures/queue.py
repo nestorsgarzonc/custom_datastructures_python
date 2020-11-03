@@ -3,7 +3,6 @@ class Node:
         self.value = value
         self.next = next
 
-
 class Lista:
     def __init__(self):
         self.head = None
@@ -20,7 +19,7 @@ class Cola(Lista):
         super().__init__()
 
     def dequeue(self):
-        if self.head == None:
+        if self.head is None:
             return None
         else:
             temp_node = self.head
@@ -28,7 +27,7 @@ class Cola(Lista):
             return temp_node.value
 
     def enqueue(self, value):
-        if self.head == None:
+        if self.head is None:
             self.head = Node(value)
             self.tail = self.head
         else:
